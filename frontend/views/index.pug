@@ -1,0 +1,20 @@
+doctype html
+html(lang="en")
+  head
+    title TL;DR
+  body
+    h1 TL;DR
+    #container.col
+      p. 
+        TL;DR is an easy to use URL shortener. #[br]
+        You enter the URL you want to shorten and we create it for you.
+      br
+      if returnUrl
+        p. 
+          Your short URL is: #[a(href=shortUrl) #{shortUrl}]
+
+      form(action='/', method='POST')
+          p
+              | URL: 
+              input(type='text', name='url', value='')
+          input(type='submit', value='Submit')
